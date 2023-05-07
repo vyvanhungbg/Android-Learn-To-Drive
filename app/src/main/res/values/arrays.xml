@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="license_type_name">
+        <item>Bằng A1</item>
+        <item>Bằng A2</item>
+        <item>Bằng A3</item>
+        <item>Bằng A4</item>
+        <item>Bằng B1</item>
+        <item>Bằng B2</item>
+        <item>Bằng C</item>
+        <item>Bằng D</item>
+        <item>Bằng E</item>
+        <item>Bằng F</item>
+    </array>
+    <array name="license_type_value">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+    </array>
+</resources>

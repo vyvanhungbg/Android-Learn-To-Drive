@@ -1,0 +1,117 @@
+<resources>
+    <string name="app_name">LearnToDrive</string>
+    <string name="something">something...</string>
+
+    <!--    string for menu-->
+    <string name="title_home">Trang chủ</string>
+    <string name="title_simulation">Mô phỏng</string>
+    <string name="title_setting">Cài đặt </string>
+
+
+    <!--    string for home fragment-->
+    <string name="title_random_question">Đề ngẫu nhiên</string>
+    <string name="title_exam_set">Thi theo đề</string>
+    <string name="title_theoretical">Học lý thuyết</string>
+    <string name="title_traffic_signs">Các biển báo</string>
+    <string name="title_wrong_answer">Xem câu sai</string>
+    <string name="title_tip_answer">Mẹo ghi nhớ</string>
+    <string name="title_required_answer">Câu điểm liệt</string>
+    <string name="mess_action_click_current_license">Để đổi loại bằng thi. Vui lòng vào phần cài đặt !</string>
+
+    <!--    string for setting fragment-->
+    <string name="title_light_mode">Nền sáng</string>
+    <string name="title_dark_mode">Nền tối</string>
+    <string name="title_text_size">Cỡ chữ</string>
+
+    <!-- string for question fragment -->
+    <string name="title_question_exam">Bằng a1</string>
+    <string name="title_exit">Thoát</string>
+    <string name="title_submit">Nộp bài</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_default_question">__/__</string>
+    <string name="text_auto_next_question">Tự động chuyển câu</string>
+    <string name="text_confirm">Xác nhận</string>
+    <string name="text_cancel">Hủy bỏ</string>
+    <string name="text_speech_voice">Lời thoại câu hỏi</string>
+    <string name="text_confirm_exit">Xác nhận thoát</string>
+    <string name="text_message_exit_to_destroy_test">Nếu bạn thoát thì bài thi này sẽ bị hủy bỏ</string>
+    <string name="description">"Giải thích:  "</string>
+    <string name="text_close">Đóng</string>
+    <string name="title_name_test">Đề thi : %s</string>
+    <string name="title_name_lesson">Bài học : %s</string>
+    <string name="title_time_test">Thời gian : %s phút</string>
+    <string name="title_time_lession">Thời gian : %s phút (%s phút / 1 câu)</string>
+    <string name="title_total_question">Tổng %s câu hỏi</string>
+    <string name="title_minimum_question">Cần đúng %s câu trở lên !</string>
+    <string name="title_info">Thông tin</string>
+    <string name="title_die_question">Có %s câu điểm liệt</string>
+    <string name="text_you_selected">Bạn chọn</string>
+    <string name="text_correct_answer">Câu đúng</string>
+    <string name="text_answer_unselected">Chưa chọn</string>
+    <string name="text_error_review_test">Có lỗi khi hiển thị bài thi này !</string>
+    <string name="text_test_name">Bài thi: </string>
+    <string name="text_result">Kết quả:</string>
+    <string name="text_wait_get_info_test">Vui lòng đang lấy thông tin bài thi</string>
+    <string name="title_tip_a1">Thi bằng A1 </string>
+    <string name="title_tip_a2">Thi bằng A2 </string>
+    <string name="title_tip_a3">Thi bằng A3 </string>
+    <string name="title_tip_a4">Thi bằng A4 </string>
+    <string name="title_tip_b1">Thi bằng B1 </string>
+    <string name="title_tip_b2">Thi bằng B2 </string>
+    <string name="title_tip_c">Thi bằng C </string>
+    <string name="title_tip_def">Thi bằng D,E,F </string>
+    <string name="title_tip_exam_drive">11 bài sa hình </string>
+    <string name="title_tip_600">Thi lý thuyết </string>
+    <string name="title_button_sound">Âm thanh :</string>
+    <string name="title_button_auto_next">Tự động chuyển :</string>
+
+    <string name="title_preferred_reset_setting">Đặt lại cài đặt</string>
+    <string name="title_summary_preferred_reset_setting">Mọi cài đặt sẽ về trạng thái ban đầu không bao gồm lịch học</string>
+    <string name="title_preferred_set_alarm">Đặt lịch học</string>
+    <string name="title_summary_preferred_set_alarm">Nhắc nhở bạn học đúng lúc</string>
+    <string name="title_prefered_license_type">Loại bằng đang chọn thi</string>
+    <string name="text_simamary_pref_auto_next">Chuyển sang câu hỏi tiếp khi lựa chọn đáp án</string>
+    <string name="title_pref_auto_next">Tự động chuyển câu hỏi</string>
+    <string name="title_pref_change_mode_theme">Chế độ tối</string>
+    <string name="title_summary_pref_change_mode_theme">Chuyển sang giao diện tối phù hợp với mắt hơn</string>
+
+    <string name="text_summary_speech_voice">Đọc câu hỏi khi được chuyển tới</string>
+    <string name="text_dialog_restore_setting_default">Đặt lại tất cả cài đặt về ban đầu !</string>
+    <string name="text_question_learned">Câu hỏi\nđã đúng</string>
+    <string name="text_percent_pass">Tỉ lệ\nvượt qua</string>
+    <string name="text_name_current_license">Loại bằng\n đang chọn</string>
+    <string name="text_tested">Bài thi\nđã làm</string>
+    <string name="description_question_type_no_question_die">Gồm %s câu hỏi</string>
+    <string name="description_question_type">Gồm %s câu hỏi (có %s câu điểm liệt)</string>
+
+    <!-- result fragment -->
+    <string name="mess_error">Có lỗi xảy ra ! thử lại sau</string>
+    <string name="mess_passed_exam">Vượt qua</string>
+    <string name="mess_failed_exam">Không đạt</string>
+    <string name="mess_success_exam">Hoàn thành</string>
+
+
+    <!-- exam set fragment -->
+    <string name="title_number_of_exam">Đề thi số</string>
+
+    <!-- learn simulation fragment -->
+    <string name="title_learn_simulation">Học mô phỏng</string>
+    <string name="mess_one_time_click_to_marked_flag">Một câu chỉ được chọn/trả lời 1 lần duy nhất</string>
+    <string name="title_question_simulation_in_test">Tình huống số %s"</string>
+    <string name="title_score_simulation_in_test">Điểm %s</string>
+    <string name="title_no_score_simulation_in_test">Chưa làm</string>
+    <string name="title_no_data">Không có dữ liệu</string>
+    <string name="title_add_alarm">Tạo nhắc hẹn</string>
+    <string name="mess_content_notification">Hãy cố gắng ôn luyện mỗi ngày để đạt thành quả nào !</string>
+    <string name="mess_title_notification">Tới giờ học lái xe rồi bạn ơi !</string>
+    <string name="mess_required_selected_day_redmine">Cần chọn ít nhất một ngày để nhắc nhở bạn !</string>
+    <string name="mess_add_success_alarm">Đã thêm nhắc nhở vào lúc %s !</string>
+    <string name="mess_add_alarm_failed">Có lỗi xảy ra khi tạo nhắc nhở. Thử lại sau !</string>
+    <string name="mess_choose_time">Chọn giờ</string>
+    <string name="mess_all_day">Hằng ngày</string>
+    <string name="mess_tip_content">Mẹo nhỏ cho bạn : %s</string>
+    <string name="mess_error_when_get_list_simulation_question">Lỗi khi lấy danh sách bài học</string>
+    <string name="mess_notification_last_question">Đã là câu hỏi cuối bạn có muốn kết thúc bài học ?</string>
+
+</resources>

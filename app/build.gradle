@@ -1,0 +1,169 @@
+buildscript {
+
+    dependencies {
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.5.3"
+        classpath 'com.google.gms:google-services:4.3.13'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.2'
+    }
+}
+plugins {
+
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+}
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    namespace 'com.suspend.android.learntodrive'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.suspend.android.learntodrive"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            resValue("string", "PORT_NUMBER", "8081")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    // preference
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // image
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+    //seek bar
+    implementation 'com.xw.repo:bubbleseekbar:3.20'
+
+
+    // timeline
+    implementation 'com.github.vipulasri:timelineview:1.1.5'
+
+
+    // sling up in bottom bar
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    // bottom bar
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+
+    implementation "com.airbnb.android:lottie:5.2.0"
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+    def navigation_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment:${navigation_version}"
+    implementation "androidx.navigation:navigation-ui:${navigation_version}"
+    implementation "androidx.navigation:navigation-fragment-ktx:${navigation_version}"
+    implementation "androidx.navigation:navigation-ui-ktx:${navigation_version}"
+
+    def lifecycle_version = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:${lifecycle_version}"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle_version}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_version}"
+    implementation "androidx.lifecycle:lifecycle-runtime:${lifecycle_version}"
+
+    def rx_version = "3.0.0"
+    implementation "io.reactivex.rxjava3:rxkotlin:${rx_version}"
+    implementation "io.reactivex.rxjava3:rxandroid:${rx_version}"
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+
+    def room_version = "2.4.3"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-rxjava3:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    def glide_version = "2.4.3"
+    implementation "com.github.bumptech.glide:glide:${glide_version}"
+
+    def koin_version = "3.3.0"
+    def koin_core_version = "3.2.2"
+    implementation "io.insert-koin:koin-core:${koin_core_version}"
+    implementation "io.insert-koin:koin-android:${koin_version}"
+    implementation "io.insert-koin:koin-androidx-navigation:${koin_version}"
+    implementation "io.insert-koin:koin-androidx-compose:${koin_version}"
+
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+
+    implementation "com.github.skydoves:powermenu:2.2.2"
+
+    implementation 'com.google.code.gson:gson:2.10'
+
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    implementation 'com.github.ceryle:RadioRealButton:v2.1.1'
+
+    def  exoPlayerVersion = "2.18.1"
+    //implementation 'com.google.android.exoplayer:exoplayer:2.18.1'
+    implementation "com.google.android.exoplayer:exoplayer-core:$exoPlayerVersion"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$exoPlayerVersion"
+
+    implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
+
+    implementation('com.itextpdf:itextpdf:5.0.6')
+
+    implementation 'com.github.HendrixString:Android-PdfMyXml:v1.0.1'
+    implementation 'com.github.Gkemon:Android-XML-to-PDF-Generator:2.6.8'
+
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.1'
+
+
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+
+    def work_version = "2.7.1"
+
+    // (Java only)
+    implementation "androidx.work:work-runtime:$work_version"
+
+    // Kotlin + coroutines
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+}

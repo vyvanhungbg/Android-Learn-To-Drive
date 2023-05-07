@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="bg_layout_state_pressed">#E47654</color>
+    <color name="bg_layout_home_random">#FF9800</color>
+    <color name="bg_layout_home_theoretical">#FFBB86FC</color>
+    <color name="bg_layout_home_traffic_signs">#28D5EC</color>
+    <color name="bg_layout_home_wrong_answer">#EF7168</color>
+    <color name="bg_layout_home_tips">#64EF69</color>
+    <color name="bg_layout_home_required_answer">#55A6E6</color>
+
+<!--    <color name="color_main">#80d1c8</color>-->
+    <color name="color_main_200">#94A9ED</color>
+    <color name="color_main">#8CA4F4</color>
+<!--    <color name="color_main_700">#0EB5A2</color>-->
+    <color name="color_main_700">#7089DD</color>
+    <color name="color_green_700">#4CAF50</color>
+<!--    <color name="color_main_900">#039181</color>-->
+    <color name="color_main_900">#446BEC</color>
+    <color name="color_gray_200">#C8FFFFFF</color>
+    <color name="color_gray_700">#C8959292</color>
+    <color name="color_red">#F1493D</color>
+    <color name="color_red_700">#F6382A</color>
+    <color name="yellow">#F1DB17</color>
+
+    <color name="transparent">#00FF2222</color>
+    <color name="black_transparent">#651C1919</color>
+    <color name="black_transparent_light">#E8000000</color>
+</resources>

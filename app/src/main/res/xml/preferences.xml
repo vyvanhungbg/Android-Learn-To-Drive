@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        android:widgetLayout="@layout/custom_switch_preferences_compat"
+        app:defaultValue="false"
+        app:key="com.suspend.android.learntodrive.VOICE"
+        app:singleLineTitle="true"
+        app:title="@string/text_speech_voice"
+        app:summary="@string/text_summary_speech_voice" />
+
+    <SwitchPreferenceCompat
+        android:widgetLayout="@layout/custom_switch_preferences_compat"
+        app:defaultValue="false"
+        app:key="com.suspend.android.learntodrive.AUTO_NEXT"
+        app:singleLineTitle="true"
+        app:summary="@string/text_simamary_pref_auto_next"
+        app:title="@string/title_pref_auto_next" />
+
+    <SwitchPreferenceCompat
+        android:widgetLayout="@layout/custom_switch_preferences_compat"
+        app:defaultValue="false"
+        app:key="com.suspend.android.learntodrive.DARK_MODE"
+        app:singleLineTitle="true"
+        app:summary="@string/title_summary_pref_change_mode_theme"
+        app:title="@string/title_pref_change_mode_theme" />
+
+    <ListPreference
+        android:entries="@array/license_type_name"
+        android:selectable="true"
+        app:defaultValue="A1"
+        app:entryValues="@array/license_type_value"
+        app:key="com.suspend.android.learntodrive.LICENSE_TYPE"
+        app:title="@string/title_prefered_license_type"
+        app:useSimpleSummaryProvider="true" />
+
+
+    <Preference
+        app:title="@string/title_preferred_set_alarm"
+        app:key="com.suspend.android.learntodrive.ALARM"
+        app:summary="@string/title_summary_preferred_set_alarm"
+        />
+
+    <Preference
+        app:title="@string/title_preferred_reset_setting"
+        app:key="com.suspend.android.learntodrive.RESTORE_SETTING"
+        app:summary="@string/title_summary_preferred_reset_setting"
+        />
+</androidx.preference.PreferenceScreen>

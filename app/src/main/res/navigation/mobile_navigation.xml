@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.suspend.android.learntodrive.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_prepare_test"
+            app:destination="@id/navigation_prepare_test"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_traffic_sign_fragment"
+            app:destination="@id/navigation_traffic_sign_fragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_wrong_answer"
+            app:destination="@id/navigation_wrong_answer" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_question_die"
+            app:destination="@id/navigation_question_die" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_tips"
+            app:destination="@id/navigation_tips" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_list_question_type"
+            app:destination="@id/navigation_list_question_type" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_list_exam_set_fragment"
+            app:destination="@id/navigation_list_exam_set_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_simulation"
+        android:name="com.suspend.android.learntodrive.ui.simulation.SimulationFragment"
+        android:label="@string/title_simulation"
+        tools:layout="@layout/fragment_simulation">
+        <action
+            android:id="@+id/action_navigation_simulation_to_navigation_learn_simulation_fragment"
+            app:destination="@id/navigation_learn_simulation_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.suspend.android.learntodrive.ui.setting.SettingFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_navigation_setting_to_navigation_alarm_fragment"
+            app:destination="@id/navigation_alarm_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="com.suspend.android.learntodrive.ui.test.TestFragment"
+        android:label="TestFragment">
+        <action
+            android:id="@+id/action_navigation_test_to_navigation_result"
+            app:destination="@id/navigation_result"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation_test"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="bundle_test"
+            android:defaultValue="@null"
+            app:argType="com.suspend.android.learntodrive.model.Test"
+            app:nullable="true" />
+        <argument
+            android:name="bundle_type"
+            android:defaultValue="LEARN"
+            app:argType="com.suspend.android.learntodrive.ui.test.TYPE" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_result"
+        android:name="com.suspend.android.learntodrive.ui.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <argument
+            android:name="bundle_result"
+            app:argType="com.suspend.android.learntodrive.model.ResultTest"
+            app:nullable="true" />
+        <argument
+            android:name="bundle_type"
+            android:defaultValue="LEARN"
+            app:argType="com.suspend.android.learntodrive.ui.test.TYPE" />
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_result_to_navigation_review_test"
+            app:destination="@id/navigation_review_test"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_prepare_test"
+        android:name="com.suspend.android.learntodrive.ui.preparetest.PrepareTestFragment"
+        android:label="fragment_prepare_test"
+        tools:layout="@layout/fragment_prepare_test">
+        <argument
+            android:name="bundle_type"
+            android:defaultValue="LEARN"
+            app:argType="com.suspend.android.learntodrive.ui.test.TYPE" />
+        <argument
+            android:name="bundle_index_exam_set"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="bundle_item_question_type"
+            app:argType="com.suspend.android.learntodrive.model.QuestionTypeEntity"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_navigation_prepare_test_to_navigation_test"
+            app:destination="@id/navigation_test"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation_prepare_test"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_traffic_sign_fragment"
+        android:name="com.suspend.android.learntodrive.ui.trafficsign.TrafficSignFragment"
+        android:label="fragment_traffic_sign"
+        tools:layout="@layout/fragment_traffic_sign" />
+    <fragment
+        android:id="@+id/navigation_wrong_answer"
+        android:name="com.suspend.android.learntodrive.ui.wronganswer.WrongAnswerFragment"
+        android:label="fragment_wrong_answer"
+        tools:layout="@layout/fragment_wrong_answer">
+        <action
+            android:id="@+id/action_navigation_wrong_answer_to_navigation_review_test"
+            app:destination="@id/navigation_review_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_question_die"
+        android:name="com.suspend.android.learntodrive.ui.diequestion.QuestionDieFragment"
+        android:label="QuestionDieFragment" />
+    <fragment
+        android:id="@+id/navigation_tips"
+        android:name="com.suspend.android.learntodrive.ui.tips.TipsFragment"
+        android:label="fragment_tips"
+        tools:layout="@layout/fragment_tips" />
+    <fragment
+        android:id="@+id/navigation_review_test"
+        android:name="com.suspend.android.learntodrive.ui.reviewtest.ReviewTest"
+        android:label="ReviewTest">
+        <argument
+            android:name="bundle_item_test_entity"
+            app:argType="com.suspend.android.learntodrive.model.TestEntity"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <activity
+        android:id="@+id/navigation_video_player"
+        android:name="com.suspend.android.learntodrive.videoplayer.VideoPlayerActivity"
+        android:label="VideoPlayerActivity" >
+        <argument
+            android:name="type_question"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </activity>
+    <fragment
+        android:id="@+id/navigation_list_question_type"
+        android:name="com.suspend.android.learntodrive.ui.list_question_type.ListQuestionTypeFragment"
+        android:label="fragment_list_question_type"
+        tools:layout="@layout/fragment_list_question_type">
+        <action
+            android:id="@+id/action_navigation_list_question_type_to_navigation_prepare_test"
+            app:destination="@id/navigation_prepare_test"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_list_exam_set_fragment"
+        android:name="com.suspend.android.learntodrive.ui.list_exam_set.ListExamSetFragment"
+        android:label="fragment_list_exam_set"
+        tools:layout="@layout/fragment_list_exam_set" >
+        <action
+            android:id="@+id/action_naviagtion_list_exam_set_fragment_to_navigation_prepare_test"
+            app:destination="@id/navigation_prepare_test"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_learn_simulation_fragment"
+        android:name="com.suspend.android.learntodrive.ui.simulation.simulation_lean.LearnSimulationFragment"
+        android:label="fragment_learn_simulation"
+        tools:layout="@layout/fragment_learn_simulation" >
+        <action
+            android:id="@+id/action_navigation_learn_simulation_fragment_to_navigation_video_player"
+            app:destination="@id/navigation_video_player" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_alarm_fragment"
+        android:name="com.suspend.android.learntodrive.ui.alarm.AlarmFragment"
+        android:label="AlarmFragment" >
+        <action
+            android:id="@+id/action_navigation_alarm_fragment_to_navigation_add_alarm_fragment"
+            app:destination="@id/navigation_add_alarm_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_add_alarm_fragment"
+        android:name="com.suspend.android.learntodrive.ui.alarm.add_alarm.AddAlarmFragment"
+        android:label="fragment_add_alarm"
+        tools:layout="@layout/fragment_add_alarm" />
+
+</navigation>
